@@ -1,130 +1,27 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-            integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <title>SushiShop</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="styles.css" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
-        <title>My index page</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+<body>
+  <app-root></app-root>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <script src="./assets/bundle.js"></script>
-    </head>
-    <body>
-
-        <!-- Navigation start -->
-        <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="./index.html">
-                        <img src="/assets/image.png" width="30" height="30" alt="">
-                        Softheme
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="./index.html">Home</a>
-                            <a class="nav-item nav-link" href="./lesson3.html">Lesson 3</a>
-                            <a class="nav-item nav-link" href="./products.html">Products</a>
-                            <a class="nav-item nav-link" href="./css.html">Css</a>
-                        </div>
-                    </div>
-                </nav>           
-            </div>
-            <!-- Navigation end -->
-
-        <div class="container index">
-
-                <h1>Bootstrap responsive design</h1>
-
-                <h2>Grid system</h2>
-    
-                <h3>1. Auto layout columns</h3>
-                <div class="row">
-                    <div class="col">col1</div>
-                    <div class="col">col2</div>
-                    <div class="col">col3</div>
-                    <div class="col">col4</div>
-                    <div class="col">col5</div>
-                    <div class="col">col6</div>
-                    <div class="col">col7</div>
-                    <div class="col">col8</div>
-                    <div class="col">col9</div>
-                    <div class="col">col10</div>
-                </div>
-    
-                <h3>2. Setting one column width</h3>
-                <div class="row">
-                    <div class="col">col 1</div>
-                    <div class="col-6">col 2</div>
-                    <div class="col">col 3</div>
-                </div>
-    
-                <h3>3. Variable width content</h3>
-                <div class="row">
-                    <div class="col-12 col-md-2">col 1</div>
-                    <div class="col-12 col-md-7">col 2</div>
-                    <div class="col-12 col-md-3">col 3</div>
-                </div>
-    
-                <h3>4. Repeatable content</h3>
-                <div class="row">
-                    <div class="col-12 col-sm-4">col 1</div>
-                    <div class="col-12 col-sm-4">col 2</div>
-                    <div class="col-12 col-sm-4">col 3</div>
-                    <div class="col-12 col-sm-4">col 4</div>
-                    <div class="col-12 col-sm-4">col 5</div>
-                    <div class="col-12 col-sm-4">col 6</div>
-                    <div class="col-12 col-sm-4">col 7</div>
-                    <div class="col-12 col-sm-4">col 8</div>
-                    <div class="col-12 col-sm-4">col 9</div>
-                    <div class="col-12 col-sm-4">col 10</div>
-                </div>
-    
-                <h3>5. Hide blocks for breakpoints</h3>
-                <div class="row">
-                    <div class="d-none d-lg-block col-lg-3">col 1</div>
-                    <div class="col-12 col-md-8 col-lg-6">col 2</div>
-                    <div class="col-12 col-md-4 col-lg-3">col 3</div>
-                </div>
-    
-                <h3>6. Hide blocks on print</h3>
-                <div class="row">
-                    <div class="col-12 d-print-none col-lg-3">col 1</div>
-                    <div class="col-12 col-lg-6">col 2</div>
-                    <div class="col-12 d-print-none col-lg-3">col 3</div>
-                </div>
-    
-                <h2>Floats</h2>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-3 py-3 px-5">
-                        <div class="float-left">$5.20</div>
-                        <button class="float-right btn-primary btn-sm">Cancel</button>
-                    </div>
-                    <div class="col-4">
-                    </div>
-                </div>
-    
-                <h3>Responsive images</h3>
-                <div class="row">
-                    <div class="col-4 p-3">
-                        <img class="img-fluid" src="./assets/image.png" alt="html 5" />
-                    </div>
-                </div>
-    
-            </div>
-            
-        </body>
-    </html>
-    
+</html>

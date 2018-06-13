@@ -1,2 +1,40 @@
-internship2018-1/node_modules/
-/internship2018-1/src/assets/bundle.js
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/internship2018-1/dist
+/internship2018-1/tmp
+/internship2018-1/out-tsc
+
+# dependencies
+/internship2018-1/node_modules
+
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/internship2018-1/.sass-cache
+/internship2018-1/connect.lock
+/internship2018-1/coverage
+/internship2018-1/libpeerconnection.log
+/internship2018-1npm-debug.log
+/internship2018-1yarn-error.log
+/internship2018-1testem.log
+/internship2018-1/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+./internship2018-1/node_modules
