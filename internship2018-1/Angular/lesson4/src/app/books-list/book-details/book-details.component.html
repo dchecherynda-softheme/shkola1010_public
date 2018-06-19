@@ -1,0 +1,15 @@
+<div>
+    <img [src]="book.imageUrl">
+    <div>
+        <p>
+            <b>Author: </b>
+            {{ book.author }}
+        </p>
+        <button *ngIf="!book.isFavorite" class="add-to-favorite" (click)="book.isFavorite = !book.isFavorite">
+            Add to Favorites
+        </button>
+        <div *ngIf="book.isFavorite">
+            <span *ngFor="let item of [1, 2, 3, 4, 5]">&#9734;</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="container">
+	<div *ngIf="books">
+		<div class="book-container" *ngFor="let item of books">
+			<book-details [book]="item"></book-details>
+		</div>
+	</div>
+</div>
