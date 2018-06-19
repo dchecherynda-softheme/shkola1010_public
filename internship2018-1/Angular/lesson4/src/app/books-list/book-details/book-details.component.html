@@ -5,11 +5,11 @@
             <b>Author: </b>
             {{ book.author }}
         </p>
-        <button *ngIf="!book.isFavorite" class="add-to-favorite" (click)="book.isFavorite = !book.isFavorite">
+        <button *ngIf="!book.isFavorite; else stars" class="add-to-favorite" (click)="book.isFavorite = !book.isFavorite">
             Add to Favorites
         </button>
-        <div *ngIf="book.isFavorite">
+        <ng-template #stars>
             <span *ngFor="let item of [1, 2, 3, 4, 5]">&#9734;</span>
-        </div>
+        </ng-template>
     </div>
 </div>
