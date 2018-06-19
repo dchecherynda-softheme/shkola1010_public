@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { BookModel } from './book-details/book.model';
+import { BooksListService } from './books-list.service';
 
 @Component({
 	selector: 'books-list',
@@ -8,11 +9,9 @@ import { BookModel } from './book-details/book.model';
 	styleUrls: ['./books-list.component.css']
 })
 export class BooksListComponent {
-	books: BookModel[] = [{
-		author: 'Stephen Hawkin',
-		title: 'The Universe in a Nutshell',
-		imageUrl: 'assets/images/1.jpg',
-		id: 1,
-		isFavorite: false
-	}];
+	books: BookModel[];
+
+	constructor(private service: BooksListService) {
+		this.books = this.service.getBooks();
+	}
 }
