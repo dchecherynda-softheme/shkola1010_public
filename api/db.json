@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Universe in a Nutshell",
+      "author": "Stephen Hawkin",
+      "isFavorite": true,
+      "imageUrl": "assets/images/1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "JavaScript Patterns",
+      "author": "Stoyan Stefanov",
+      "isFavorite": false,
+      "imageUrl": "assets/images/2.jpg"
+    }
+  ]
+}
