@@ -5,7 +5,7 @@
             <b>Author: </b>
             {{ book.author }}
         </p>
-        <button *ngIf="!book.isFavorite; else stars" class="add-to-favorite" (click)="book.isFavorite = !book.isFavorite">
+        <button *ngIf="!book.isFavorite; else stars" class="add-to-favorite" (click)="favoriteClicked.emit(book.id)">
             Add to Favorites
         </button>
         <ng-template #stars>

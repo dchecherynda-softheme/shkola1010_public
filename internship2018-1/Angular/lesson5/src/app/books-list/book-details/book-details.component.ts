@@ -12,5 +12,5 @@ export class BookDetailsComponent {
     book: BookModel;
 
     @Output()
-    favoriteClicked = new EventEmitter<number>();
+    favoriteClicked = new EventEmitter<string>();
 }
