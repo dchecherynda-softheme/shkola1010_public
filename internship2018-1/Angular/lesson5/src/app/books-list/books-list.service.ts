@@ -1,21 +1,20 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 import { BookModel } from './book-details/book.model';
 
-export class BooksListService {
-    books: BookModel[] = [{
-        author: 'Stephen Hawkin',
-        title: 'The Universe in a Nutshell',
-        imageUrl: 'assets/images/1.jpg',
-        id: 1,
-        isFavorite: false
-    }, {
-        author: 'Stoyan Stefanov',
-        title: 'JavaScript Patterns',
-        imageUrl: 'assets/images/2.jpg',
-        id: 2,
-        isFavorite: false
-    }];
+const requestUrl = 'http://localhost:3000';
 
-    getBooks(): BookModel[] {
-        return this.books;
+@Injectable()
+export class BooksListService {
+    constructor(private http: HttpClient) { }
+
+    getBooks(): Observable<BookModel[]> {
+        return this.http.get<BookModel[]>(`${requestUrl}/books`);
+    }
+
+    markAsFavorite(id: string): Observable<void> {
+        return this.http.patch<void>(`${requestUrl}/books/${id}`, { isFavorite: true });
     }
 }

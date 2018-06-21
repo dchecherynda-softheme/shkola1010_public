@@ -2,6 +2,6 @@ export interface BookModel {
     author: string;
     title: string;
     imageUrl: string;
-    id: number;
+    id: string;
     isFavorite: false;
 }
