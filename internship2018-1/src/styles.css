@@ -119,3 +119,9 @@
   i.fa-smile {
     color: darkgreen;
   }
+
+  span.discount-price + span {
+    color: grey;
+    margin: 10px;
+    text-decoration: line-through;
+  }
