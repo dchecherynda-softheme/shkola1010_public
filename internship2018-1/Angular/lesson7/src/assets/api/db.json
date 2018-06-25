@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Universe in a Nutshell",
+      "author": "Stephen Hawkin",
+      "isFavorite": true,
+      "imageUrl": "assets/images/1.jpg",
+      "price": 50
+    },
+    {
+      "id": "2",
+      "title": "JavaScript Patterns",
+      "author": "Stoyan Stefanov",
+      "isFavorite": true,
+      "imageUrl": "assets/images/2.jpg",
+      "price": 38
+    },
+    {
+      "id": "3",
+      "title": "Angular: Up and Running: Learning Angular, Step by Step",
+      "author": "Shyam Seshadri",
+      "isFavorite": false,
+      "imageUrl": "assets/images/3.jpg",
+      "price": 47
+    }
+  ]
+}
