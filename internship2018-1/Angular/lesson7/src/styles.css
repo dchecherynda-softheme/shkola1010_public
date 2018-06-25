@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00a8a8;
+    height: 50px;
+    box-shadow: 0 2px 5px 0 #999f9f;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: 15px 70px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.container {
+    margin-top: 80px;
+    margin-left: 60px;
+}
+
+img {
+    height: 215px;
+    width: 168px;
+}

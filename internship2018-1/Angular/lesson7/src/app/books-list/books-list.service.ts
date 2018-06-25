@@ -14,6 +14,10 @@ export class BooksListService {
         return this.http.get<BookModel[]>(`${requestUrl}/books`);
     }
 
+    getBook(id: string): Observable<BookModel> {
+        return this.http.get<BookModel>(`${requestUrl}/books/${id}`);
+    }
+
     markAsFavorite(id: string): Observable<void> {
         return this.http.patch<void>(`${requestUrl}/books/${id}`, { isFavorite: true });
     }

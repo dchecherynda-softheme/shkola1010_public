@@ -1,7 +1,12 @@
-<div class="container">
-	<div *ngIf="books">
-		<div class="book-container" *ngFor="let item of books">
-			<book-details [book]="item" (favoriteClicked)="markAsFavorite($event)"></book-details>
-		</div>
+<div *ngIf="books; else loading">
+	<div class="book-container" *ngFor="let item of books">
+		<a [routerLink]="[item.id]">
+			<img [src]="item.imageUrl">
+		</a>
+		<p>
+			<b>Price: </b>
+			{{ item.price | currency }}
+		</p>
 	</div>
 </div>
+<ng-template #loading>Loading...</ng-template>

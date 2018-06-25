@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { switchMap } from 'rxjs/operators';
 
 import { BookModel } from './book-details/book.model';
 import { BooksListService } from './books-list.service';
@@ -17,14 +16,5 @@ export class BooksListComponent implements OnInit {
 	ngOnInit() {
 		this.service.getBooks()
 			.subscribe(response => this.books = response);
-	}
-
-	markAsFavorite(id: string) {
-		this.service.markAsFavorite(id)
-			.pipe(switchMap(() => this.service.getBooks()))
-			.subscribe(
-				response => this.books = response,
-				error => console.log(error)
-			);
 	}
 }
