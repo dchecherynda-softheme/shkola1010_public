@@ -1,0 +1,13 @@
+<div>
+    <h3>{{ product.name }}</h3>
+    <div>
+      <img [src]="product.src" [alt]="product.name" class="img-fluid">
+    </div>
+    <div class="py-3 px-5">
+      <div class="float-left">
+      <span appDiscountPrice [originalPrice]="product.price"></span>
+      <span>{{ product.price | currency:'' | price }}</span>
+    </div>
+      <button class="btn float-right btn-primary btn-sm">Order</button>
+    </div>
+  </div>

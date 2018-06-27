@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-12">
+        <input type="checkbox" (click)="onlyVegan = !onlyVegan"> Show only vegan {{ onlyVegan }}
+    </div>
+    <ng-container *ngFor="let product of products">
+        <div class="col-12 col-md-4" *ngIf="onlyVegan == false || product.isVegan">
+            <app-product-details [product]="product"></app-product-details>
+        </div>
+    </ng-container>
+</div>
