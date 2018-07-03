@@ -22,6 +22,6 @@
 
 <div class="container">
   <h2>Products</h2>
-  <button (click)="showProduct = !showProduct">Toggle products</button>
+  <button mat-raised-button color="primary" (click)="showProduct = !showProduct">Toggle products</button>
   <app-product-list *ngIf="showProduct"></app-product-list>
 </div>

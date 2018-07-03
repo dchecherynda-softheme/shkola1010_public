@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+div.col-12 mat-radio-button {
+  display: block;
+}
 
 .index .row > div:nth-child(1) {
     background-color: yellow; }

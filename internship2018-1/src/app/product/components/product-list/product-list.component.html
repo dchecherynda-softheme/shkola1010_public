@@ -1,6 +1,14 @@
 <div class="row">
     <div class="col-12">
+            <mat-icon svgIcon="thumbs-up"></mat-icon>
         <input type="checkbox" (click)="onlyVegan = !onlyVegan"> Show only vegan {{ onlyVegan }}
+    </div>
+    <div class="col-12">
+        Select item is {{ selectedItem }}
+        
+        <mat-radio-group [(ngModel)]="selectedItem">
+            <mat-radio-button *ngFor="let item of productTypes" [value]="item.id" (click)="selectedItem = item.id">{{ item.name }}</mat-radio-button>           
+        </mat-radio-group>
     </div>
     <ng-container *ngFor="let product of products">
         <div class="col-12 col-md-4" *ngIf="onlyVegan == false || product.isVegan">
