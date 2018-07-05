@@ -1,0 +1,53 @@
+<style>
+  
+</style>
+
+<div style="width: 100%; height: 100vh; background-color: #030A63">
+    <mat-card style="display: inline-block; width: 955px; height: 577px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);">
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <div style="margin: 80px 40px;">
+                <h1 style="text-align: center; text-transform: uppercase">Log in</h1>
+                <p style="text-align: center">
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit
+                </p>
+
+                <form novalidate #loginForm>
+                  <mat-form-field style="width: 100%;">
+                    <div style="border: 1px solid grey; padding: 2px; border-radius: 4px;">
+                      <mat-icon style="width: 10%">home</mat-icon>
+                      <input [(ngModel)]="user.email" type="email" name="email2" #name required placeholder="email" class="no-label-animation" matInput style="width: 90%; margin-bottom: 6px;">
+                    </div>
+                  </mat-form-field>
+
+                  <mat-form-field style="width: 100%">
+                    <input [(ngModel)]="user.password" type="password" name="password" required matInput style="width: 100%">
+                  </mat-form-field>
+
+                  <div style="margin-top: 60px;">
+                    <div>
+                      <button type="submit" mat-raised-button color="primary" style="width: 100%; text-transform: uppercase">Login</button>
+                    </div>
+                    
+                    <div>
+                      <a href="#" mat-button style="width: 100%">forgot password?</a>
+                    </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+          <div class="col-7">
+            col-7
+          </div>
+        </div>
+      </div>
+    </mat-card>
+
+</div>
