@@ -1,132 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./assets/fonts/icomoon/icomoon.css";
 
-div.col-12 mat-radio-button {
-  display: block;
+@font-face {
+  font-family: Muli-Bold;
+  src: url(./assets/fonts/Muli-Bold.ttf);
 }
 
-.index .row > div:nth-child(1) {
-    background-color: yellow; }
-  
-  .index .row > div:nth-child(2) {
-    background-color: green; }
-  
-  .index .row > div:nth-child(3) {
-    background-color: blue; }
-  
-  .index .row > div:nth-child(4) {
-    background-color: red; }
-  
-  .index .row > div:nth-child(5) {
-    background-color: orange; }
-  
-  .index .row > div:nth-child(6) {
-    background-color: mediumturquoise; }
-  
-  .index .row > div:nth-child(7) {
-    background-color: limegreen; }
-  
-  .index .row > div:nth-child(8) {
-    background-color: lightpink; }
-  
-  .index .row > div:nth-child(9) {
-    background-color: lightcoral; }
-  
-  .index .row > div:nth-child(10) {
-    background-color: brown; }
-  
-  h2 {
-    padding: 40px 0 10px 0; }
-  
-  h3 {
-    margin: 30px 0 10px 0; }
-  
-  nav {
-    margin-bottom: 30px; }
-  
-  nav.navbar a.active {
-    color: white;
-    background-color: cornflowerblue; }
-  
-  #part1 strong {
-    color: green; }
-  
-  #part1 .red {
-    color: red; }
-  
-  #part1 #save-btn {
-    background-color: yellow; }
-  
-  #part1 [disabled] {
-    cursor: not-allowed; }
-  
-  #part1 p * {
-    text-decoration: underline; }
-  
-  #part1 div p > span {
-    color: red; }
-  
-  #part1 a:link {
-    color: yellow; }
-  
-  #part1 a:visited {
-    color: brown; }
-  
-  #part1 tr:hover {
-    color: deeppink; }
-  
-  #part1 a:active {
-    color: greenyellow; }
-  
-  #part1 table {
-    cursor: pointer; }
-  
-  #part1 tr:nth-child(odd) {
-    background-color: lightslategrey; }
-  
-  #part1 tr:nth-child(even) {
-    background-color: darkslategrey; }
-  
-  #part2 {
-    background-color: red; }
-  
-  #part2 > div {
-    background-color: beige;
-    border: 5px solid indigo;
-    opacity: 0.6;
-    width: 100%;
-    padding: 40px;
-    top: 0;
-    left: 0; }
-  
-  #part2 > div > p {
-    margin: 20px;
-    padding: 20px;
-    height: 400px;
-    border: 1px solid green; }
-  
-  #part2 div#first {
-    display: block;
-  }
-  
-  i.fas {
-    font-size: 72px;
-  }
-  
-  i.fa-frown {
-    color: red;
-  }
-  
-  i.fa-meh {
-    color: orange;
-  }
-  
-  i.fa-smile {
-    color: darkgreen;
-  }
+@font-face {
+  font-family: Muli-Regular;
+  src: url(./assets/fonts/Muli-Regular.ttf);
+}
 
-  span.discount-price + span {
-    color: grey;
-    margin: 10px;
-    text-decoration: line-through;
-  }
+@font-face {
+  font-family: Muli-Light;
+  src: url(./assets/fonts/Muli-Light.ttf);
+}
+
+* {
+  font-family: Muli-Regular;
+}

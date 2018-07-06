@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/components/login/login.component';
-import { LoginModule } from './login/login.module';
+import { AuthModule } from './auth/auth.module';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
+import { AuthRoutingModule } from './auth/auth-routing.module';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent }
+  { path: '', component: AuthComponent }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    LoginModule,
+    AuthRoutingModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
