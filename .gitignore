@@ -38,3 +38,5 @@
 .DS_Store
 Thumbs.db
 ./internship2018-1/node_modules
+/webpack/node_modules
+/webpack/dist
