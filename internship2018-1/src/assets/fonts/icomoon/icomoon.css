@@ -26,67 +26,54 @@
 
 .icon-approved-by-icon:before {
   content: "\e900";
-  color: #667eea;
 }
 .icon-approved-request:before {
   content: "\e901";
 }
 .icon-calendar:before {
   content: "\e902";
-  color: #bdbdbd;
 }
 .icon-cansel-icon:before {
   content: "\e903";
-  color: #bdbdbd;
 }
 .icon-denied-request:before {
   content: "\e904";
 }
 .icon-down-icon:before {
   content: "\e905";
-  color: #bdbdbd;
 }
 .icon-edit-icon-grey:before {
   content: "\e906";
-  color: #bdbdbd;
 }
 .icon-edit-icon-white:before {
   content: "\e907";
-  color: #fff;
 }
 .icon-gragient-box:before {
   content: "\e908";
 }
 .icon-logo-softheme:before {
   content: "\e909";
-  color: #fff;
 }
 .icon-logout-icon:before {
   content: "\e90a";
-  color: #bdbdbd;
 }
 .icon-message-icon:before {
   content: "\e90b";
-  color: #66eaca;
 }
 .icon-new-request-icon:before {
   content: "\e90c";
 }
 .icon-next-icon:before {
   content: "\e90d";
-  color: #bdbdbd;
 }
 .icon-online-icon:before {
   content: "\e90e";
-  color: #66eaca;
 }
 .icon-password-icon:before {
   content: "\e90f";
-  color: #bdbdbd;
 }
 .icon-user-icon:before {
   content: "\e910";
-  color: #bdbdbd;
 }
 .icon-user-profile-icon .path1:before {
   content: "\e911";

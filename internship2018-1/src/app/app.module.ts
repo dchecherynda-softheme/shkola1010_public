@@ -1,30 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatButtonModule,
-  MatCheckboxModule
-} from '@angular/material';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
-import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { MainModule } from './main/main.module';
 import { ProductModule } from './product/product.module';
-import { AppRoutingModule } from './/app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    SharedModule,
     HttpClientModule,
+    MainModule,
     ProductModule,
-    AppRoutingModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
