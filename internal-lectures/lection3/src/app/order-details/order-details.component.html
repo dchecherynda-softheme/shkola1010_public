@@ -1,6 +1,12 @@
 <div class="card mb-3">
     <div class="card-body">
-        <h5 class="card-title">{{ orderName }}</h5>
-        <button class="btn btn-info" (click)="createEvent()">Remove</button>
+        <h5 class="card-title">{{ order.name }}</h5>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-4">Order date:</dt><dd>{{ order.date }}</dd>
+                <dt class="col-8">Order price:</dt><dd>{{ order.price }}</dd>
+            </dl>
+        </div>
+        <button class="btn btn-info" (click)="onRemove()">Remove</button>
     </div>
 </div>

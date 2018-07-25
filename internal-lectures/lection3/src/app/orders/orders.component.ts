@@ -1,22 +1,20 @@
 import { Component } from '@angular/core';
+import { OrderDetailsModel } from '../models/order-details.model';
+import { OrderDetailsService } from '../services/order-details.service';
 
 @Component({
     selector: 'app-orders',
     templateUrl: './orders.component.html'
 })
 export class OrdersComponent {
-    orderName: string;
-    orderNames: string[] = [];
-    isDisabled: boolean;
+    orders: OrderDetailsModel[];
 
-    addOdrer() {
-        if (this.orderName) {
-            this.orderNames.push(this.orderName);
-            console.log('New order has been added!', this.orderName);
-        }
+    constructor(orderDetailsService: OrderDetailsService) {
+        this.orders = orderDetailsService.getOrders();
     }
 
-    removeOrder(name: string) {
-        this.orderNames = this.orderNames.filter(i => i !== name);
+    removeOrder(id: number) {
+        console.log(`Now you are trying to delete order with id ${id}`);
     }
+
 }
