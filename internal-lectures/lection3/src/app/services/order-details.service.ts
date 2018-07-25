@@ -9,6 +9,16 @@ export class OrderDetailsService {
         { id: 3, name: 'Product 3', price: 6.1, date: 1532502671716 }
     ];
 
+    constructor() {
+        const refreshFunc = () => {
+            // copy list to pass it's value. Not reference
+            this.orderList = this.orderList.splice(0);
+        };
+
+        // update orderList every 5 seconds
+        setInterval(refreshFunc, 5000);
+    }
+
     getOrders(): OrderDetailsModel[] {
         return this.orderList;
     }

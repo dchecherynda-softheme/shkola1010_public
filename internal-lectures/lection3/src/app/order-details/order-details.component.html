@@ -6,6 +6,11 @@
                 <dt class="col-4">Order date:</dt><dd>{{ order.date }}</dd>
                 <dt class="col-8">Order price:</dt><dd>{{ order.price }}</dd>
             </dl>
+            <textarea style="width: 100%;" rows="5">
+Unable save this text between requests.
+Because angular always refresh the list.
+Impossible identify that list has same object in two different request
+            </textarea>
         </div>
         <button class="btn btn-info" (click)="onRemove()">Remove</button>
     </div>
