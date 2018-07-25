@@ -1,0 +1,10 @@
+<div class="input-group mb-3">
+    <input class="form-control" [(ngModel)]="orderName">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" [disabled]="isDisabled" (click)="addOdrer()">Add order</button>
+    </div>
+</div>
+
+<div *ngFor="let name of orderNames">
+    <app-order-details [orderName]="name" (remove)="removeOrder($event)"></app-order-details>
+</div>
