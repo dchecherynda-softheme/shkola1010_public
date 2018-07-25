@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
-import { OrderDetailsService } from './services/order-details.service';
 
 @NgModule({
     declarations: [
@@ -18,7 +17,6 @@ import { OrderDetailsService } from './services/order-details.service';
         FormsModule
     ],
     providers: [
-        OrderDetailsService
     ],
     bootstrap: [AppComponent]
 })
