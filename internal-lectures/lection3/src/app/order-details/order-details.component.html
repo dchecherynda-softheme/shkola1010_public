@@ -4,7 +4,7 @@
         <div class="card-body">
             <dl class="row">
                 <dt class="col-4">Order date:</dt><dd>{{ order.date | date }}</dd>
-                <dt class="col-8">Order price:</dt><dd>{{ order.price | currency }}</dd>
+                <dt class="col-8">Order price:</dt><dd>{{ order.price | number:'1.2-2' | hryvnia }}</dd>
             </dl>
             <textarea style="width: 100%;" rows="5">
 Unable save this text between requests.
