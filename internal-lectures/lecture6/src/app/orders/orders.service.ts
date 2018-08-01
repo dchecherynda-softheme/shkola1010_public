@@ -1,24 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject, BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
-
+import { Observable } from 'rxjs';
 
 import { OrderDetailsModel } from '../order-details/order-details.model';
 import { LoggingService } from '../logger.service';
 
 @Injectable()
 export class OrdersService {
-    private currentOrdersNumber = 0;
-    private orderSubject: BehaviorSubject<number> = new BehaviorSubject(0);
-    public orderObservable = this.orderSubject.asObservable();
-
-    constructor(private logger: LoggingService, private httpClient: HttpClient) {
-        this.get().subscribe((orders) => {
-            this.currentOrdersNumber = orders.length;
-            this.orderSubject.next(this.currentOrdersNumber);
-        });
-    }
+    constructor(private logger: LoggingService, private httpClient: HttpClient) { }
 
     get(): Observable<OrderDetailsModel[]> {
         this.logger.info('Getting orders...');
@@ -27,13 +16,6 @@ export class OrdersService {
     }
 
     delete(id: number): Observable<any> {
-        return this.httpClient.delete('http://localhost:3000/orders/' + id).pipe(
-            map((item) => {
-                this.currentOrdersNumber = this.currentOrdersNumber - 1;
-                this.orderSubject.next(this.currentOrdersNumber);
-
-                return item;
-            })
-        );
+        return this.httpClient.delete('http://localhost:3000/orders/' + id);
     }
 }

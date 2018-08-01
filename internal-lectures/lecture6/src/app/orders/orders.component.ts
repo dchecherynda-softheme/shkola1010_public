@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { OrderDetailsModel } from '../order-details/order-details.model';
 import { OrdersService } from './orders.service';
@@ -7,27 +7,13 @@ import { OrdersService } from './orders.service';
     selector: 'app-orders',
     templateUrl: './orders.component.html'
 })
-export class OrdersComponent {
+export class OrdersComponent implements OnInit {
     orders: OrderDetailsModel[];
-    orderCount = 0;
 
-    constructor(private service: OrdersService) {
-        const next = (orders) => {
-            this.orders = orders;
-        };
+    constructor(private service: OrdersService) { }
 
-        const error = (err) => {
-            console.error(err);
-        };
-
-
-        const complete = () => {
-            console.log('Observable is finished');
-        };
-
-        this.service.get().subscribe(next, error, complete);
-
-        this.service.orderObservable.subscribe(item => this.orderCount = item);
+    ngOnInit() {
+        this.service.get().subscribe(orders => this.orders = orders);
     }
 
     removeOrder(id: number) {

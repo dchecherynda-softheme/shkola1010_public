@@ -1,9 +1,7 @@
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Angular</a>
-    <app-top-order></app-top-order>
 </nav>
 <div class="container-fluid">
-    <button class="btn btn-primary" (click)="isVisible = !isVisible">Show orders</button>
-    <app-orders *ngIf="isVisible"></app-orders>
+    <app-orders></app-orders>
     <!-- <app-rxjs></app-rxjs> -->
 </div>
