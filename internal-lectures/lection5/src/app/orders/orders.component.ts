@@ -9,13 +9,34 @@ import { OrdersService } from './orders.service';
 })
 export class OrdersComponent {
     orders: OrderDetailsModel[];
+    orderCount = 0;
 
     constructor(private service: OrdersService) {
-        this.orders = this.service.getOrders();
+        const next = (orders) => {
+            this.orders = orders;
+        };
+
+        const error = (err) => {
+            console.error(err);
+        };
+
+
+        const complete = () => {
+            console.log('Observable is finished');
+        };
+
+        this.service.get().subscribe(next, error, complete);
+
+        this.service.orderObservable.subscribe(item => this.orderCount = item);
     }
 
     removeOrder(id: number) {
-        console.log(`Now you are trying to delete order with id ${id}`);
+        const next = () => {
+            const index = this.orders.findIndex(order => order.id === id);
+            this.orders.splice(index, 1);
+        };
+
+        this.service.delete(id).subscribe(next);
     }
 
     trackById(index: number, item: OrderDetailsModel) {

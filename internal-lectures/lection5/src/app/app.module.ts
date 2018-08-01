@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +14,8 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
 // import { ordersServiceFactory } from './orders/orders-service.factory';
 
 import { LoggingService } from './logger.service';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { TopOrderComponent } from './top-order/top-order.component';
 // import { NewLoggingService } from './new-logger.service';
 
 @NgModule({
@@ -21,11 +24,14 @@ import { LoggingService } from './logger.service';
         OrdersComponent,
         OrderDetailsComponent,
         ClickOnceDirective,
-        HryvniaPipe
+        HryvniaPipe,
+        RxjsComponent,
+        TopOrderComponent
     ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
     providers: [
         LoggingService,

@@ -1,11 +1,52 @@
 {
-    "orders": [
-        { "id": 1, "name": "Product 1", "price": 3.5, "date": 1532502771716 },
-        { "id": 2, "name": "Product 2", "price": 3.2, "date": 1532502371716 },
-        { "id": 3, "name": "Product 3", "price": 6.1, "date": 1532502671716 },
-        { "id": 4, "name": "Product 4", "price": 7.12, "date": 1532502671716 },
-        { "id": 5, "name": "Product 5", "price": 2.78, "date": 1532502671716 },
-        { "id": 6, "name": "Product 6", "price": 3.88, "date": 1532502671716 },
-        { "id": 7, "name": "Product 7", "price": 2.74, "date": 1532502671716 }
-    ]
+  "orders": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 2.74,
+      "date": 1532502671716
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 2.74,
+      "date": 1532502671716
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "price": 2.74,
+      "date": 1532502671716
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "price": 2.74,
+      "date": 1532502671716
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "price": 2.74,
+      "date": 1532502671716
+    },
+    {
+      "id": 6,
+      "name": "Product 6",
+      "price": 2.74,
+      "date": 1532502671716
+    },
+    {
+      "id": 7,
+      "name": "Product 7",
+      "price": 2.74,
+      "date": 1532502671716
+    },
+    {
+      "id": 8,
+      "name": "Product 8",
+      "price": 2.74,
+      "date": 1532502671716
+    }
+  ]
 }
