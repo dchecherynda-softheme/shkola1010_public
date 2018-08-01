@@ -11,12 +11,9 @@ import { HryvniaPipe } from './hryvnia.pipe';
 import { OrdersComponent } from './orders/orders.component';
 import { OrdersService } from './orders/orders.service';
 import { OrderDetailsComponent } from './order-details/order-details.component';
-// import { ordersServiceFactory } from './orders/orders-service.factory';
 
 import { LoggingService } from './logger.service';
 import { RxjsComponent } from './rxjs/rxjs.component';
-import { TopOrderComponent } from './top-order/top-order.component';
-// import { NewLoggingService } from './new-logger.service';
 
 @NgModule({
     declarations: [
@@ -25,8 +22,7 @@ import { TopOrderComponent } from './top-order/top-order.component';
         OrderDetailsComponent,
         ClickOnceDirective,
         HryvniaPipe,
-        RxjsComponent,
-        TopOrderComponent
+        RxjsComponent
     ],
     imports: [
         BrowserModule,
@@ -35,10 +31,7 @@ import { TopOrderComponent } from './top-order/top-order.component';
     ],
     providers: [
         LoggingService,
-        OrdersService,
-        // { provide: OrdersService, useValue: { getOrders: () => [] } },
-        // { provide: LoggingService, useClass: NewLoggingService },
-        // { provide: OrdersService, useFactory: ordersServiceFactory, deps: [LoggingService] }
+        OrdersService
     ],
     bootstrap: [AppComponent]
 })
