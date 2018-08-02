@@ -3,19 +3,18 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { OrderDetailsModel } from '../order-details/order-details.model';
-import { LoggingService } from '../logger.service';
+
+const REQUEST_URL = 'http://localhost:3000/orders';
 
 @Injectable()
 export class OrdersService {
-    constructor(private logger: LoggingService, private httpClient: HttpClient) { }
+    constructor(private httpClient: HttpClient) { }
 
-    get(): Observable<OrderDetailsModel[]> {
-        this.logger.info('Getting orders...');
-
-        return <Observable<OrderDetailsModel[]>>(this.httpClient.get('http://localhost:3000/orders'));
+    getOrders(): Observable<OrderDetailsModel[]> {
+        return <Observable<OrderDetailsModel[]>>(this.httpClient.get(REQUEST_URL));
     }
 
     delete(id: number): Observable<any> {
-        return this.httpClient.delete('http://localhost:3000/orders/' + id);
+        return this.httpClient.delete(`${REQUEST_URL}/${id}`);
     }
 }
