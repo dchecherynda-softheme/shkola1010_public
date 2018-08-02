@@ -1,12 +1,10 @@
-<div class="alert alert-success" role="alert">
-    You have {{ orders?.length }} orders
-</div>
+<app-orders-badge [total]="orders.length">
+    <h4 #content>Content</h4>
+</app-orders-badge>
 
 <div class="mt-3 row" *ngIf="orders?.length; else noData">
-    <div class="col-4">
-        <div *ngFor="let order of orders; trackBy: trackById">
-            <app-order-details [order]="order" (remove)="removeOrder($event)"></app-order-details>
-        </div>
+    <div class="col-4" *ngFor="let order of orders; trackBy: trackById">
+        <app-order-details [order]="order" (remove)="removeOrder($event)"></app-order-details>
     </div>
 </div>
 <ng-template #noData>

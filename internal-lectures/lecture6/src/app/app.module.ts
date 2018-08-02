@@ -11,6 +11,7 @@ import { HryvniaPipe } from './hryvnia.pipe';
 import { OrdersComponent } from './orders/orders.component';
 import { OrdersService } from './orders/orders.service';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { OrdersBadgeComponent } from './orders-badge/orders-badge.component';
 
 import { LoggingService } from './logger.service';
 import { RxjsComponent } from './rxjs/rxjs.component';
@@ -22,7 +23,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         OrderDetailsComponent,
         ClickOnceDirective,
         HryvniaPipe,
-        RxjsComponent
+        RxjsComponent,
+        OrdersBadgeComponent
     ],
     imports: [
         BrowserModule,
