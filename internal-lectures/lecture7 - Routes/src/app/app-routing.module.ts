@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
+  { path: 'orders', loadChildren: './order/order.module#OrderModule' },
   { path: '', component: ProductsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

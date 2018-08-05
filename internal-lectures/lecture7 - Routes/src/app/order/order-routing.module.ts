@@ -4,8 +4,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderInfoComponent } from './order-info/order-info.component';
 
 const routes: Routes = [
-  { path: 'orders', component: OrdersComponent },
-  { path: 'order/:id', component: OrderInfoComponent },
+  { path: '', component: OrdersComponent },
+  { path: ':id', component: OrderInfoComponent },
 ];
 
 @NgModule({

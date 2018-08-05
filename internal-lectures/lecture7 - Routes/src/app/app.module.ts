@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { CartOrdersCountComponent } from './cart-orders-count/cart-orders-count.component';
 import { ProductsComponent } from './products/products.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { OrderModule } from './order/order.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { SharedModule } from './shared/shared.module';
         PageNotFoundComponent,
     ],
     imports: [
-        OrderModule,
         AppRoutingModule,
         SharedModule,
         BrowserModule,
