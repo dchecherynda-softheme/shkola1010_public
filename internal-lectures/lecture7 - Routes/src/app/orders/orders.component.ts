@@ -21,7 +21,7 @@ export class OrdersComponent implements OnInit, AfterViewInit {
     constructor(private service: OrdersService) { }
 
     ngOnInit() {
-        this.service.getOrders()
+        this.service.get()
             .subscribe(orders => this.orders = orders);
     }
 
@@ -31,7 +31,7 @@ export class OrdersComponent implements OnInit, AfterViewInit {
 
     removeOrder(id: number) {
         this.service.delete(id)
-            .pipe(switchMap(() => this.service.getOrders()))
+            .pipe(switchMap(() => this.service.get()))
             .subscribe(
                 response => this.orders = response,
                 error => console.log(error)

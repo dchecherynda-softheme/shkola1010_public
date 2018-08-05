@@ -15,21 +15,24 @@ import { OrdersBadgeComponent } from './orders-badge/orders-badge.component';
 
 import { LoggingService } from './logger.service';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { CartOrdersCountComponent } from './cart-orders-count/cart-orders-count.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        OrdersComponent,
-        OrderDetailsComponent,
+        CartOrdersCountComponent,
         ClickOnceDirective,
         HryvniaPipe,
+        OrderDetailsComponent,
+        OrdersBadgeComponent,
+        OrdersComponent,
         RxjsComponent,
-        OrdersBadgeComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
     ],
     providers: [
         LoggingService,
