@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+a.active {
+    font-weight: bold;
+    color: yellow;
+}

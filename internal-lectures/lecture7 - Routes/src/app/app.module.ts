@@ -17,6 +17,8 @@ import { LoggingService } from './logger.service';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { CartOrdersCountComponent } from './cart-orders-count/cart-orders-count.component';
+import { ProductsComponent } from './products/products.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +30,8 @@ import { CartOrdersCountComponent } from './cart-orders-count/cart-orders-count.
         OrdersBadgeComponent,
         OrdersComponent,
         RxjsComponent,
+        ProductsComponent,
+        PageNotFoundComponent,
     ],
     imports: [
         AppRoutingModule,
