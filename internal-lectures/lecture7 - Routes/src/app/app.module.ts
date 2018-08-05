@@ -30,6 +30,7 @@ import { CartOrdersCountComponent } from './cart-orders-count/cart-orders-count.
         RxjsComponent,
     ],
     imports: [
+        AppRoutingModule,
         BrowserModule,
         FormsModule,
         HttpClientModule,
