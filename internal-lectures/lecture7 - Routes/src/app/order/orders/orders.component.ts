@@ -6,9 +6,9 @@ import {
 } from '@angular/core';
 import { switchMap } from 'rxjs/operators';
 
-import { OrderDetailsModel } from '../order-details/order-details.model';
-import { OrdersService } from './orders.service';
+import { OrderDetailsModel } from '../../shared/order-details.model';
 import { OrdersBadgeComponent } from '../orders-badge/orders-badge.component';
+import { OrdersService } from '../../shared/orders.service';
 
 @Component({
     selector: 'app-orders',

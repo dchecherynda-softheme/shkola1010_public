@@ -5,43 +5,29 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import { ClickOnceDirective } from './click-once.directive';
-import { HryvniaPipe } from './hryvnia.pipe';
-
-import { OrdersComponent } from './orders/orders.component';
-import { OrdersService } from './orders/orders.service';
-import { OrderDetailsComponent } from './order-details/order-details.component';
-import { OrdersBadgeComponent } from './orders-badge/orders-badge.component';
-
-import { LoggingService } from './logger.service';
 import { RxjsComponent } from './rxjs/rxjs.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { CartOrdersCountComponent } from './cart-orders-count/cart-orders-count.component';
 import { ProductsComponent } from './products/products.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { OrderModule } from './order/order.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
     declarations: [
         AppComponent,
         CartOrdersCountComponent,
-        ClickOnceDirective,
-        HryvniaPipe,
-        OrderDetailsComponent,
-        OrdersBadgeComponent,
-        OrdersComponent,
         RxjsComponent,
         ProductsComponent,
         PageNotFoundComponent,
     ],
     imports: [
+        OrderModule,
         AppRoutingModule,
+        SharedModule,
         BrowserModule,
         FormsModule,
         HttpClientModule,
-    ],
-    providers: [
-        LoggingService,
-        OrdersService
     ],
     bootstrap: [AppComponent]
 })

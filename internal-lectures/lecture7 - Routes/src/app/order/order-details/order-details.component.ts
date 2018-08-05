@@ -10,7 +10,7 @@ import {
     DoCheck
 } from '@angular/core';
 
-import { OrderDetailsModel } from './order-details.model';
+import { OrderDetailsModel } from '../../shared/order-details.model';
 
 @Component({
     selector: 'app-order-details',

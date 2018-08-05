@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { OrderDetailsModel } from '../order-details/order-details.model';
-import { LoggingService } from '../logger.service';
+import { LoggingService } from './logger.service';
+import { OrderDetailsModel } from './order-details.model';
 
 const REQUEST_URL = 'http://localhost:3000/orders';
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrdersService } from '../orders/orders.service';
+import { OrdersService } from '../shared/orders.service';
 
 @Component({
   selector: 'app-cart-orders-count',
