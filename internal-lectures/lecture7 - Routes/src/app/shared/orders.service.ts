@@ -21,10 +21,12 @@ export class OrdersService {
         });
     }
 
-    get(): Observable<OrderDetailsModel[]> {
+    get(id?: number): Observable<OrderDetailsModel[]> {
         this.logger.info('Getting orders...');
 
-        return <Observable<OrderDetailsModel[]>>(this.httpClient.get(REQUEST_URL));
+        const requestUrl = id ? `${REQUEST_URL}/${id}` : REQUEST_URL;
+
+        return <Observable<OrderDetailsModel[]>>(this.httpClient.get(requestUrl));
     }
 
     delete(id: number): Observable<any> {
