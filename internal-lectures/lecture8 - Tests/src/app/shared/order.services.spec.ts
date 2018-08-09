@@ -1,5 +1,4 @@
 import { OrdersService } from './orders.service';
-import { HttpClient } from '@angular/common/http';
 import { defer } from 'rxjs';
 import { OrderDetailsModel } from './order-details.model';
 
