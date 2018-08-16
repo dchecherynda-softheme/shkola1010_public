@@ -1,14 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { Product, getDefaultModel } from './products.model';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html'
+    selector: 'app-products',
+    templateUrl: './products.component.html',
+    styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
+    model: Product = getDefaultModel();
+    types = ['bananas', 'oranges', 'apples'];
+    countries = ['Ukraine', 'Other countries'];
+    hasCategoryError = false;
 
-  constructor() { }
+    submit() {
+        console.log(this.model);
+    }
 
-  ngOnInit() {
-  }
-
+    validateCategory(value: string) {
+        this.hasCategoryError = value === 'default';
+    }
 }

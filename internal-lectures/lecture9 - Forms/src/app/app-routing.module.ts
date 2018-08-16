@@ -4,19 +4,19 @@ import { ProductsComponent } from './products/products.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'products', component: ProductsComponent },
-  { path: 'orders', loadChildren: './order/order.module#OrderModule' },
-  { path: '', component: ProductsComponent },
-  { path: '**', component: PageNotFoundComponent },
+    { path: 'products', component: ProductsComponent },
+    { path: 'orders', loadChildren: './order/order.module#OrderModule' },
+    { path: '', redirectTo: 'products', pathMatch: 'full' },
+    { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
 })
 export class AppRoutingModule {
 }

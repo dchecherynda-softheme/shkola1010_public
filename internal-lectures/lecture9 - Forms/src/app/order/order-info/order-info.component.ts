@@ -5,24 +5,24 @@ import { OrdersService } from '../../shared/orders.service';
 import { OrderDetailsModel } from '../../shared/order-details.model';
 
 @Component({
-  selector: 'app-order-info',
-  templateUrl: './order-info.component.html'
+    selector: 'app-order-info',
+    templateUrl: './order-info.component.html'
 })
 export class OrderInfoComponent implements OnInit {
 
-  order: OrderDetailsModel;
+    order: OrderDetailsModel;
 
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private orderService: OrdersService,
-  ) { }
+    constructor(
+        private activatedRoute: ActivatedRoute,
+        private orderService: OrdersService,
+    ) { }
 
-  ngOnInit() {
-    this.activatedRoute.paramMap.pipe(switchMap((params: Map<string, any>) => {
-      const orderId = params.get('id');
+    ngOnInit() {
+        this.activatedRoute.paramMap.pipe(switchMap((params: Map<string, any>) => {
+            const orderId = params.get('id');
 
-      return this.orderService.get(orderId);
-    })).subscribe((order: OrderDetailsModel) => this.order = order);
-  }
+            return this.orderService.get(orderId);
+        })).subscribe((order: OrderDetailsModel) => this.order = order);
+    }
 
 }

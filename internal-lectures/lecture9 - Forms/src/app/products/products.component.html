@@ -1,3 +1,59 @@
-<p>
-  products works!
-</p>
+<div class="container mt-5 col-6">
+    <form class="p-3" (ngSubmit)="submit()" #orderForm="ngForm" novalidate>
+        <h3>Create a new order</h3>
+
+        <div class="form-group mt-4">
+            <label class="font-weight-bold">Name</label>
+            <input #formName="ngModel" [(ngModel)]="model.name" type="text" class="form-control" name="name" minlength="3" required>
+            <div *ngIf="formName.invalid && formName.dirty" class="alert alert-danger">
+                Name is required.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="category" class="font-weight-bold">Product category</label>
+            <select #category class="form-control" [(ngModel)]="model.category" name="category" required
+                (blur)="validateCategory(category.value)"
+                (change)="validateCategory(category.value)">
+                
+                <option value="default">Select a category...</option>
+                <option *ngFor="let category of types" [value]="category">{{ category }}</option>
+            </select>
+            <div *ngIf="hasCategoryError" class="alert alert-danger">
+                Category is required.
+            </div>
+        </div>
+
+        <div class="checkbox">
+            <label>
+                <input [(ngModel)]="model.isAvailable" type="checkbox" name="availability"> Is available
+            </label>
+        </div>
+
+        <label class="font-weight-bold mt-4">Made in</label>
+        <div *ngFor="let country of countries" class="radio">
+            <label>
+                <input [(ngModel)]="model.country" [value]="country" type="radio" name="radio" required> {{ country }}
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-4" [disabled]="!orderForm.form.valid">Submit</button>
+    </form>
+</div>
+
+<div class="mt-5">
+    <span class="font-weight-bold">Name: </span>
+    <span>{{ model.name }}</span>
+</div>
+<div>
+    <span class="font-weight-bold">Is Available: </span>
+    <span>{{ model.isAvailable }}</span>
+</div>
+<div>
+    <span class="font-weight-bold">Category: </span>
+    <span>{{ model.category }}</span>
+</div>
+<div>
+    <span class="font-weight-bold">Country: </span>
+    <span>{{ model.country }}</span>
+</div>
